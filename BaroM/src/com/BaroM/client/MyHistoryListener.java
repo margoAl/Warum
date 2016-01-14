@@ -8,7 +8,7 @@ import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.user.client.ui.RootPanel;
 
 public class MyHistoryListener implements ValueChangeHandler<String> {
-
+//Idea from internet, code made by me.
 	@Override
 	public void onValueChange(ValueChangeEvent<String> event) {
 		System.out.println("Current State : " + event.getValue());
