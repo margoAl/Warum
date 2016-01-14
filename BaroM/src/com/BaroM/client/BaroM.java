@@ -12,8 +12,6 @@ public class BaroM implements EntryPoint {
 
 	public void onModuleLoad() {
 
-		 HTML html = new HTML("This is made by <b>Margo Allik</b>", true);
-
 		String startToken = History.getToken();
 
 		if (startToken.length() == 0) {

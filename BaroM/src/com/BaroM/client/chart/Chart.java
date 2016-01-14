@@ -13,6 +13,7 @@ import com.googlecode.gwt.charts.client.ChartPackage;
 import com.googlecode.gwt.charts.client.ColumnType;
 import com.googlecode.gwt.charts.client.DataTable;
 import com.googlecode.gwt.charts.client.corechart.PieChart;
+
 //Used GXT sample
 public class Chart extends Widget {
 	private SimpleLayoutPanel layoutPanel;
@@ -77,7 +78,7 @@ public class Chart extends Widget {
 		return _instance;
 
 	}
-	
+
 	// Button btn4 = new Button("Tagasi");
 	// btn4.addClickHandler(new ClickHandler() {
 	// @Override
@@ -87,5 +88,5 @@ public class Chart extends Widget {
 	// }
 	//
 	// });
-	
+
 }

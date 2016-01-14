@@ -19,14 +19,14 @@ public class WorkPlaceOne extends Composite {
 
 	private VerticalPanel vPanel = new VerticalPanel();
 	static private WorkPlaceOne inst = null;
-	private ArrayList<Integer> wpoResult; 
+	private ArrayList<Integer> wpoResult;
 
 	public WorkPlaceOne() {
 
 		initWidget(this.vPanel);
 
 		vPanel.setBorderWidth(1);
-		//Questions for questionnaire
+		// Questions for questionnaire
 		final String[] questions = { "Kui kaua v\u00f6tab aega t\u00f6\u00f6 alustamine t\u00f6\u00f6kohal?",
 				"Kui palju kulub aega seoses ebasobivate t\u00f6\u00f6v\u00f6tetega?",
 				"Kui palju kulub aega seoses seadme t\u00fchi k\u00e4iguga?",
@@ -36,7 +36,7 @@ public class WorkPlaceOne extends Composite {
 				"Kui palju kulub aega, muudele t\u00f6\u00f6ga mitteseotud tegevustele?" };
 
 		{
-			//Creating questionnaire with answers
+			// Creating questionnaire with answers
 			for (int i = 0; i < questions.length; i++) {
 
 				final Label questions1 = new Label(questions[i]);
@@ -48,14 +48,13 @@ public class WorkPlaceOne extends Composite {
 				vPanel.add(radioButton1);
 				vPanel.add(radioButton2);
 				vPanel.add(radioButton3);
-				
-				//Checking the chosen answers 
+
+				// Checking the chosen answers
 				radioButton1.addClickHandler(new ClickHandler() {
 					public void onClick(ClickEvent event) {
 						boolean checked = ((CheckBox) event.getSource()).getValue();
 						Window.alert("It is R1" + (checked ? "" : "not ") + "checked");
 						wpoResult.add(2);
-						 
 
 					}
 				});
@@ -80,9 +79,9 @@ public class WorkPlaceOne extends Composite {
 			HorizontalPanel hPanel = new HorizontalPanel();
 			hPanel.setBorderWidth(1);
 			// Array for storing values
-			
+
 			wpoResult = new ArrayList();
-			//Buttons for navigation
+			// Buttons for navigation
 			Button btn2 = new Button("Salvesta ja edasi!");
 			btn2.addClickHandler(new ClickHandler() {
 				@Override
