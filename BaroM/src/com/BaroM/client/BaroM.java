@@ -2,6 +2,7 @@ package com.BaroM.client;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.History;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.RootPanel;
 
 /**
@@ -11,7 +12,7 @@ public class BaroM implements EntryPoint {
 
 	public void onModuleLoad() {
 
-		// HTML html = new HTML("This is made by <b>Margo Allik</b>", true);
+		 HTML html = new HTML("This is made by <b>Margo Allik</b>", true);
 
 		String startToken = History.getToken();
 

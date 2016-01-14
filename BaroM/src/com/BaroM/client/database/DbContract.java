@@ -1,4 +1,4 @@
-package com.BaroM.client;
+package com.BaroM.client.database;
 
 public interface DbContract {
 	public static final String HOST = "jdbc:postgresql://localhost:5432/";

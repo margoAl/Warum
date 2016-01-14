@@ -1,10 +1,15 @@
-package com.BaroM.client;
+package com.BaroM.client.questions;
+
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RadioButton;
 import com.google.gwt.user.client.ui.VerticalPanel;
@@ -15,6 +20,7 @@ public class ManuOne extends Composite {
 	// Widget composed from other widgets
 	private VerticalPanel vPanel = new VerticalPanel();
 	static private ManuOne instance = null;
+	private ArrayList manuResult;
 
 	public ManuOne() {
 
@@ -44,6 +50,14 @@ public class ManuOne extends Composite {
 			}
 
 		}
+		//Listener to finding choice
+		
+		
+		//Array for storing answers
+		manuResult = new ArrayList();
+		
+	
+		
 		//Buttons for navigation
 
 		Button button = new Button("Salvesta ja edasi!");
@@ -51,13 +65,18 @@ public class ManuOne extends Composite {
 			@Override
 			public void onClick(ClickEvent event) {
 				History.newItem("WorkPlaceOne", true);
+										
 
 			}
-
+			
 		});
 		vPanel.add(button);
+		vPanel.add(html);
 	}
 
+	HTML html = new HTML("This is made by <b>Margo Allik</b>", true);
+	
+	
 	public static Widget getInstance() {
 		if (null == instance) {
 			instance = new ManuOne();

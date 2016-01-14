@@ -1,4 +1,4 @@
-package com.BaroM.client;
+package com.BaroM.client.chart;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;

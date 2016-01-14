@@ -1,4 +1,6 @@
-package com.BaroM.client;
+package com.BaroM.client.questions;
+
+import java.util.ArrayList;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -17,6 +19,7 @@ public class WorkPlaceOne extends Composite {
 
 	private VerticalPanel vPanel = new VerticalPanel();
 	static private WorkPlaceOne inst = null;
+	private ArrayList<Integer> wpoResult; 
 
 	public WorkPlaceOne() {
 
@@ -51,6 +54,7 @@ public class WorkPlaceOne extends Composite {
 					public void onClick(ClickEvent event) {
 						boolean checked = ((CheckBox) event.getSource()).getValue();
 						Window.alert("It is R1" + (checked ? "" : "not ") + "checked");
+						wpoResult.add(2);
 						 
 
 					}
@@ -59,6 +63,7 @@ public class WorkPlaceOne extends Composite {
 					public void onClick(ClickEvent event) {
 						boolean checked = ((CheckBox) event.getSource()).getValue();
 						Window.alert("It is R2" + (checked ? "" : "not ") + "checked");
+						wpoResult.add(2);
 
 					}
 				});
@@ -66,6 +71,7 @@ public class WorkPlaceOne extends Composite {
 					public void onClick(ClickEvent event) {
 						boolean checked = ((CheckBox) event.getSource()).getFormValue() != null;
 						Window.alert("It is R3" + (checked ? "" : "not ") + "checked");
+						wpoResult.add(3);
 					}
 				});
 
@@ -73,7 +79,9 @@ public class WorkPlaceOne extends Composite {
 
 			HorizontalPanel hPanel = new HorizontalPanel();
 			hPanel.setBorderWidth(1);
+			// Array for storing values
 			
+			wpoResult = new ArrayList();
 			//Buttons for navigation
 			Button btn2 = new Button("Salvesta ja edasi!");
 			btn2.addClickHandler(new ClickHandler() {

@@ -1,4 +1,4 @@
-package com.BaroM.client;
+package com.BaroM.client.database;
 
 import java.util.ArrayList;
 import java.util.Scanner;

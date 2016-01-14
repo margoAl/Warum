@@ -1,10 +1,8 @@
-package com.BaroM.client;
+package com.BaroM.client.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
-
-import com.BaroM.client.DbContract;;
+import java.sql.SQLException;;
 
 public class DbConnection {
 	public static void main(String[] args) {
